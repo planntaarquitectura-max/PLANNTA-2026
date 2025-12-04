@@ -28,15 +28,15 @@ const Contact: React.FC = () => {
             <div className="space-y-2 font-mono text-sm">
               <div className="flex justify-between border-b border-white/10 py-2">
                 <span className="text-gray-500">EMAIL</span>
-                <span className="text-white hover:text-neon cursor-pointer">INFO@PLANNTA.MX</span>
+                <span className="text-white hover:text-neon cursor-pointer lowercase">contact@plannta.com</span>
               </div>
               <div className="flex justify-between border-b border-white/10 py-2">
                 <span className="text-gray-500">PHONE</span>
-                <span className="text-white">+52 (55) 5555 0000</span>
+                <span className="text-white">+52 (664) 555 0000</span>
               </div>
               <div className="flex justify-between border-b border-white/10 py-2">
                 <span className="text-gray-500">HQ</span>
-                <span className="text-white">MEXICO CITY [CDMX]</span>
+                <span className="text-white">TIJUANA, BC / REMOTE</span>
               </div>
             </div>
           </div>

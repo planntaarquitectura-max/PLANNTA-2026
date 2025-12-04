@@ -17,22 +17,22 @@ const Services: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10">
           {SERVICES.map((service, idx) => (
-            <div key={service.id} className="bg-void p-8 group hover:bg-white transition-colors duration-300 min-h-[300px] flex flex-col justify-between relative overflow-hidden">
+            <div key={service.id} className="bg-void p-8 group hover:bg-white transition-colors duration-300 min-h-[320px] flex flex-col justify-between relative overflow-hidden">
               
               {/* Header */}
               <div className="flex justify-between items-start">
-                <service.icon className="w-8 h-8 text-white group-hover:text-black transition-colors" />
-                <span className="font-mono text-xs text-gray-600 group-hover:text-black">
+                <service.icon className="w-10 h-10 text-white group-hover:text-black transition-colors" />
+                <span className="font-mono text-sm text-gray-600 group-hover:text-black">
                   {idx < 9 ? `0${idx + 1}` : idx + 1}
                 </span>
               </div>
 
               {/* Body */}
               <div>
-                <h3 className="text-xl font-sans font-bold text-white group-hover:text-black mb-4 uppercase tracking-tight">
+                <h3 className="text-2xl font-sans font-bold text-white group-hover:text-black mb-4 uppercase tracking-tight leading-none">
                   {service.title}
                 </h3>
-                <p className="font-mono text-xs text-gray-400 group-hover:text-gray-800 leading-relaxed">
+                <p className="font-mono text-sm text-gray-400 group-hover:text-gray-800 leading-relaxed">
                   {service.description}
                 </p>
               </div>

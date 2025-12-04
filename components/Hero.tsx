@@ -249,7 +249,7 @@ const Hero: React.FC = () => {
           <div className="absolute top-0 right-0 p-4 font-mono text-[10px] text-gray-500 hidden md:block text-right">
             SYSTEM STATUS: ONLINE<br/>
             VER: 4.2.0<br/>
-            LOC: MX-CITY
+            LOC: TIJUANA / REMOTE
           </div>
 
           <div className="mb-8">
