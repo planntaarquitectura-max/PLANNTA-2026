@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
               </div>
               <div className="flex justify-between border-b border-white/10 py-2">
                 <span className="text-gray-500">PHONE</span>
-                <span className="text-white">+52 (664) 555 0000</span>
+                <span className="text-white">+52 664 609 4105</span>
               </div>
               <div className="flex justify-between border-b border-white/10 py-2">
                 <span className="text-gray-500">HQ</span>

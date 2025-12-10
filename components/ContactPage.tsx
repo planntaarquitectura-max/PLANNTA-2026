@@ -72,7 +72,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <span className="text-xs text-neon uppercase block mb-1">Voice_Link</span>
-                    <p className="text-white text-lg font-sans font-bold">+52 (664) 555 0000</p>
+                    <p className="text-white text-lg font-sans font-bold">+52 664 609 4105</p>
                     <p className="text-gray-400 text-sm">Mon-Fri 09:00 - 18:00 PST</p>
                   </div>
                 </div>
