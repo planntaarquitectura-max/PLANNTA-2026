@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
     { name: 'INDEX', type: 'anchor', path: '/', hash: '#hero' },
     { name: 'PROFILE', type: 'page', path: '/profile' },
     { name: 'WORKS', type: 'page', path: '/works' },
-    { name: 'SYSTEM', type: 'anchor', path: '/', hash: '#methodology' },
+    { name: 'SYSTEM', type: 'page', path: '/system' },
   ];
 
   const getHref = (item: NavItem) => {

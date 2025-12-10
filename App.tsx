@@ -6,6 +6,7 @@ import ServicesPage from './components/ServicesPage';
 import ProfilePage from './components/ProfilePage';
 import WorksPage from './components/WorksPage';
 import ContactPage from './components/ContactPage';
+import SystemPage from './components/SystemPage';
 import Contact from './components/Contact';
 import AIConsultant from './components/AIConsultant';
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/works" element={<WorksPage />} />
+            <Route path="/system" element={<SystemPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>

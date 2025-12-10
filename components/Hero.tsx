@@ -238,8 +238,8 @@ const Hero: React.FC = () => {
   const navItems = [
     { name: 'INDEX', target: '#hero', type: 'anchor' },
     { name: 'PROFILE', target: '/profile', type: 'link' },
-    { name: 'WORKS', target: '/works', type: 'link' }, // Changed to link to /works
-    { name: 'SYSTEM', target: '#methodology', type: 'anchor' },
+    { name: 'WORKS', target: '/works', type: 'link' },
+    { name: 'SYSTEM', target: '/system', type: 'link' }, // Changed to link to /system
     { name: 'SERVICES', target: '/services', type: 'link' },
   ];
 
