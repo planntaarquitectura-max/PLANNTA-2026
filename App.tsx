@@ -1,29 +1,30 @@
 import React from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import Projects from './components/Projects';
-import Methodology from './components/Methodology';
-import Mentorship from './components/Mentorship';
+import HomePage from './components/HomePage';
+import ServicesPage from './components/ServicesPage';
+import ProfilePage from './components/ProfilePage';
+import WorksPage from './components/WorksPage';
 import Contact from './components/Contact';
 import AIConsultant from './components/AIConsultant';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50 font-sans selection:bg-primary-500 selection:text-white">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Projects />
-        <Methodology />
-        <Mentorship />
-      </main>
-      <Contact />
-      <AIConsultant />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-void text-slate-50 font-sans selection:bg-neon selection:text-black">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/works" element={<WorksPage />} />
+          </Routes>
+        </main>
+        <Contact />
+        <AIConsultant />
+      </div>
+    </Router>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowDownRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { HERO_CONTENT } from '../constants';
 
 const DiamondAnimation: React.FC = () => {
@@ -234,6 +235,17 @@ const DiamondAnimation: React.FC = () => {
 };
 
 const Hero: React.FC = () => {
+  const navItems = [
+    { name: 'INDEX', target: '#hero', type: 'anchor' },
+    { name: 'PROFILE', target: '/profile', type: 'link' },
+    { name: 'WORKS', target: '/works', type: 'link' }, // Changed to link to /works
+    { name: 'SYSTEM', target: '#methodology', type: 'anchor' },
+    { name: 'SERVICES', target: '/services', type: 'link' },
+  ];
+
+  // Repeat the nav items to ensure the marquee has enough content to loop smoothly
+  const marqueeContent = [...navItems, ...navItems, ...navItems, ...navItems];
+
   return (
     <section id="hero" className="relative min-h-screen flex flex-col pt-20 bg-void grid-bg overflow-hidden border-b border-white/10">
       
@@ -281,25 +293,22 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Marquee Footer */}
-      <div className="border-t border-b border-white/10 bg-white text-black py-3 overflow-hidden relative z-20">
-        <div className="animate-marquee whitespace-nowrap flex gap-8 items-center font-sans font-bold text-lg md:text-xl tracking-widest uppercase">
-          <span>BIM COORDINATION</span>
-          <span className="text-neon font-black">+</span>
-          <span>GENERATIVE AI</span>
-          <span className="text-neon font-black">+</span>
-          <span>SUSTAINABILITY</span>
-          <span className="text-neon font-black">+</span>
-          <span>ASSET MANAGEMENT</span>
-          <span className="text-neon font-black">+</span>
-          <span>CLASH DETECTION</span>
-          <span className="text-neon font-black">+</span>
-          <span>PARAMETRIC DESIGN</span>
-          <span className="text-neon font-black">+</span>
-          <span>BIM COORDINATION</span>
-          <span className="text-neon font-black">+</span>
-          <span>GENERATIVE AI</span>
-          <span className="text-neon font-black">+</span>
-          <span>SUSTAINABILITY</span>
+      <div className="border-t border-b border-white/10 bg-white text-black py-3 overflow-hidden relative z-20 group">
+        <div className="animate-marquee whitespace-nowrap flex gap-8 items-center font-sans font-bold text-lg md:text-xl tracking-widest uppercase group-hover:[animation-play-state:paused]">
+          {marqueeContent.map((item, idx) => (
+            <React.Fragment key={idx}>
+              {item.type === 'link' ? (
+                <Link to={item.target} className="hover:text-neon transition-colors cursor-pointer">
+                  {item.name}
+                </Link>
+              ) : (
+                <a href={item.target} className="hover:text-neon transition-colors cursor-pointer">
+                  {item.name}
+                </a>
+              )}
+              <span className="text-neon font-black">+</span>
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </section>

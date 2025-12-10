@@ -1,6 +1,7 @@
 import React from 'react';
 import { PROJECTS } from '../constants';
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Projects: React.FC = () => {
   return (
@@ -63,9 +64,9 @@ const Projects: React.FC = () => {
           ))}
         </div>
         
-        <div className="p-4 bg-neon text-black text-center font-mono text-xs font-bold uppercase hover:bg-white cursor-pointer transition-colors">
+        <Link to="/works" className="block p-4 bg-neon text-black text-center font-mono text-xs font-bold uppercase hover:bg-white cursor-pointer transition-colors">
           [ LOAD_MORE_PROJECTS ]
-        </div>
+        </Link>
       </div>
     </section>
   );
