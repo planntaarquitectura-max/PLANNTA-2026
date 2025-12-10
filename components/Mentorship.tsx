@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { COURSES } from '../constants';
 import { TerminalSquare } from 'lucide-react';
 
@@ -15,9 +16,9 @@ const Mentorship: React.FC = () => {
             <p className="font-mono text-sm mb-8 leading-relaxed">
               Proprietary methodologies available for external acquisition. Upgrade your operational capacity.
             </p>
-            <a href="#contact" className="inline-block px-6 py-3 border-2 border-black font-bold font-sans text-sm hover:bg-black hover:text-white transition-colors uppercase">
+            <Link to="/contact" className="inline-block px-6 py-3 border-2 border-black font-bold font-sans text-sm hover:bg-black hover:text-white transition-colors uppercase">
               Request Access
-            </a>
+            </Link>
           </div>
 
           {/* Courses Grid */}

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { PROJECTS } from '../constants';
 import { ArrowUpRight, FolderOpen } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const WorksPage: React.FC = () => {
   useEffect(() => {
@@ -86,9 +87,9 @@ const WorksPage: React.FC = () => {
             <p className="font-mono text-sm text-gray-600 mb-8 max-w-lg mx-auto">
               Ready to implement intelligent architectural processes for your next development?
             </p>
-            <a href="/#contact" className="inline-block border-2 border-black text-black font-bold font-sans text-sm px-8 py-4 uppercase hover:bg-black hover:text-white transition-all">
+            <Link to="/contact" className="inline-block border-2 border-black text-black font-bold font-sans text-sm px-8 py-4 uppercase hover:bg-black hover:text-white transition-all">
                Initiate Contact Sequence
-            </a>
+            </Link>
          </div>
       </div>
     </div>

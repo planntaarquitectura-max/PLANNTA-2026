@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Services from './Services';
+import { Link } from 'react-router-dom';
 import { Cpu } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
@@ -43,9 +44,9 @@ const ServicesPage: React.FC = () => {
             <p className="font-mono text-sm mb-6 max-w-xl mx-auto">
                We tailor our BIM and Design implementation to your specific project scale and requirements.
             </p>
-            <a href="/#contact" className="inline-block bg-black text-neon font-mono text-xs px-8 py-3 uppercase hover:bg-neon hover:text-black transition-colors">
+            <Link to="/contact" className="inline-block bg-black text-neon font-mono text-xs px-8 py-3 uppercase hover:bg-neon hover:text-black transition-colors">
                Request Custom Proposal
-            </a>
+            </Link>
          </div>
       </div>
     </div>

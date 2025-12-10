@@ -79,9 +79,9 @@ const Navbar: React.FC = () => {
             SERVICES
           </Link>
 
-          <a href={isHome ? '#contact' : '/#contact'} className="flex items-center px-8 border-l border-white/10 bg-white text-black font-sans font-bold text-sm hover:bg-neon transition-colors">
+          <Link to="/contact" className="flex items-center px-8 border-l border-white/10 bg-white text-black font-sans font-bold text-sm hover:bg-neon transition-colors">
             INITIATE_CONTACT
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -123,6 +123,13 @@ const Navbar: React.FC = () => {
               className="block p-6 border-b border-white/5 text-sm font-mono text-gray-300 hover:text-neon hover:pl-8 transition-all"
             >
               <span className="text-neon mr-4">05 //</span> SERVICES
+            </Link>
+            <Link 
+              to="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block p-6 border-b border-white/5 text-sm font-mono bg-white text-black font-bold hover:bg-neon hover:pl-8 transition-all"
+            >
+              INITIATE_CONTACT
             </Link>
         </div>
       )}
